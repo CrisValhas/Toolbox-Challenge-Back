@@ -12,4 +12,7 @@ In the project directory, you can run:
 
 ### `npm start` ###
 
+### Routes ###
 
+- http://localhost:3001/files/list para obtener la lista de los archivos disponibles.
+- http://localhost:3001/files/data para obtener la lista de archivos validos.

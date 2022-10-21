@@ -1,0 +1,14 @@
+### Instalación ###
+
+*se necesita configurar el "API_KEY" de la API Swagger: https://echo-serv.tbxnet.com/explorer/#/Secret en un archivo .ENV
+      
+      -npm install
+
+### inicio ###
+
+      -npm start
+
+### Test ###
+
+      -npm test
+

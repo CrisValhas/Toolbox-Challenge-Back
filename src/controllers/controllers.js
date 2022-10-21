@@ -1,5 +1,6 @@
 const axios = require('axios');
-const API_KEY = "Bearer aSuperSecretKey";
+require('dotenv').config();
+const API_KEY=process.env.API_KEY;
 
 //--Utils--//
 const getApiFile = async (fileName) => {
@@ -20,8 +21,9 @@ const getApiFile = async (fileName) => {
 
 //--challenge--//
 const challenge = async (req, res, next) => {
+    // console.log(API_KEY)
     try {
-        const response = await axios.get(`https://echo-serv.tbxnet.com/v1/secret/files`, { headers: { Authorization: API_KEY } });
+        const response = await axios.get(`https://echo-serv.tbxnet.com/v1/secret/files`, { headers: {Authorization: API_KEY} });
         const listFiles = response.data.files;
         if (Array.isArray(listFiles)) {
             let data = [];
